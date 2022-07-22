@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.App {
+  width: 100vw;
+  height: 100vh;
+  background-color: paleturquoise;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+:root {
+  --cell-size: 30px;
+  --cell-number: 20;
+  --border-size: 1px;
+}
+
+.board {
+  width: calc((var(--cell-size) + var(--border-size) + 1) * var(--cell-number));
+  height: calc((var(--cell-size) + var(--border-size) + 1) * var(--cell-number));
+
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.cell{
+  height: var(--cell-size);
+  width: var(--cell-size);
+  border: var(--border-size) grey solid;
+}
+
+.cell--alive {
+  background-color: black;
+}
+
+.cell--dead {
+  background-color: white;
+}
