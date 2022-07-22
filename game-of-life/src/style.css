@@ -85,3 +85,24 @@
   border-radius: 5px;
   cursor: pointer;
 }
+
+.wrapping-button {
+  width: 100px;
+  height: 30px;
+  background-color: teal;
+  color: darkorange;
+  border-radius: 5px;
+  cursor: pointer;
+  position: fixed;
+  top: 30%;
+  right: 5%;
+}
+
+.text-generation {
+  position: fixed;
+  top: 10%;
+  left: 5%;
+  background-color: bisque;
+  color: black;
+  border-radius: 5px;
+}

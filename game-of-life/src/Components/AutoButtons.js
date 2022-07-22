@@ -1,9 +1,9 @@
 import React, { useState, useContext, useEffect } from "react";
-import { createNextGeneration } from "../utils/utils";
+import { createNextGeneration, createNextGenerationWrapping } from "../utils/utils";
 import BoardContext from "../contexts/boardContext";
 
 export default function AutoButtons() {
-  const { board, setBoard } = useContext(BoardContext);
+  const { board, setBoard, wrapping, generation, setGeneration } = useContext(BoardContext);
   const [isRunning, setIsRunning] = useState(false);
   const [speed, setSpeed] = useState(100);
 
@@ -18,11 +18,16 @@ export default function AutoButtons() {
   useEffect(() => {
     if (isRunning) {
       const interval = setInterval(() => {
-        createNextGeneration(board, setBoard);
+        if (!wrapping) {
+        createNextGeneration(board, setBoard, generation, setGeneration);
+        }
+        else {
+          createNextGenerationWrapping(board, setBoard, generation, setGeneration);
+        }
       }, 500/speed);
       return () => clearInterval(interval);
     }
-  }, [isRunning, board, setBoard, speed]);
+  }, [isRunning, board, setBoard, speed, wrapping]);
   
 
   //start simulation whenever isRunning state changes
