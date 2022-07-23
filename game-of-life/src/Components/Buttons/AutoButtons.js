@@ -1,11 +1,11 @@
 import React, { useState, useContext, useEffect } from "react";
-import { createNextGeneration, createNextGenerationWrapping } from "../utils/utils";
-import BoardContext from "../contexts/boardContext";
+import { createNextGeneration, createNextGenerationWrapping } from "../../utils/utils";
+import BoardContext from "../../contexts/boardContext";
 
 export default function AutoButtons() {
   const { board, setBoard, wrapping, generation, setGeneration } = useContext(BoardContext);
   const [isRunning, setIsRunning] = useState(false);
-  const [speed, setSpeed] = useState(100);
+  const [speed, setSpeed] = useState(2);
 
   //if !isRunning, set to true and vice versa
   //for clicking button to start/stop
@@ -27,17 +27,10 @@ export default function AutoButtons() {
       }, 500/speed);
       return () => clearInterval(interval);
     }
-  }, [isRunning, board, setBoard, speed, wrapping]);
+  }, [isRunning, board]);
   
 
-  //start simulation whenever isRunning state changes
-  // useEffect(() => {
-  //   console.log("useEffect", isRunning);
-  //   if (isRunning) {
-  //     console.log("STARTING SIMULATION");
-  //     runSimulation(isRunning);
-  //   }
-  // }, [isRunning]);
+
 
   return (
     <div className="auto-buttons">

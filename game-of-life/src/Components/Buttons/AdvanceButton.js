@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
-import BoardContext from "../contexts/boardContext";
-import { createNextGeneration, createNextGenerationWrapping} from "../utils/utils";
+import BoardContext from "../../contexts/boardContext";
+import { createNextGeneration, createNextGenerationWrapping} from "../../utils/utils";
 
 export default function AdvanceButton() {
   const { board, setBoard , wrapping, generation, setGeneration} = useContext(BoardContext);

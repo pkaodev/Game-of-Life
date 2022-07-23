@@ -1,5 +1,5 @@
 import React, {useContext, useEffect} from 'react'
-import BoardContext from '../contexts/boardContext'
+import BoardContext from '../../contexts/boardContext'
 
 export default function WrappingButton() {
     const { wrapping, setWrapping } = useContext(BoardContext)

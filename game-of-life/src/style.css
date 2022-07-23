@@ -56,9 +56,7 @@
   color: white;
   border-radius: 5px;
   cursor: pointer;
-  position: fixed;
-  top: 50%;
-  right: 5%;
+  margin: 10px 0px;
 }
 
 .auto-buttons {
@@ -68,9 +66,7 @@
   color: white;
   border-radius: 5px;
   cursor: pointer;
-  position: fixed;
-  top: 40%;
-  right: 5%;
+  margin: 10px 0px;
 }
 
 .speed-input {
@@ -93,16 +89,43 @@
   color: darkorange;
   border-radius: 5px;
   cursor: pointer;
-  position: fixed;
-  top: 30%;
-  right: 5%;
 }
 
 .text-generation {
-  position: fixed;
-  top: 10%;
-  left: 5%;
   background-color: bisque;
   color: black;
   border-radius: 5px;
+}
+
+.create-board-buttons {
+  width: 100px;
+  height: auto;
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+
+  display: flex;
+  flex-direction: column;
+
+}
+
+.size-input {
+  width: 100px;
+}
+
+.reset-button {
+  width: 100px;
+  height: 30px;
+  background-color: green;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button-holder {
+  position: fixed;
+  right: 5%;
+  bottom: 50%;
+  display: flex;
+  flex-direction: column;
 }

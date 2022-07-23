@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import BoardContext from '../contexts/boardContext'
+import BoardContext from '../../contexts/boardContext'
 
 export default function TextGeneration() {
     const { generation } = useContext(BoardContext)

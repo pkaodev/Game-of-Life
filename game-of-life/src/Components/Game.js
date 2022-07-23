@@ -1,12 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Board from "./Board";
 import { create2DArray } from "../utils/utils";
 import BoardContext from "../contexts/boardContext";
-import AdvanceButton from "./AdvanceButton";
-import AutoButtons from "./AutoButtons";
-import CreateBoardButtons from "./CreateBoardButtons";
-import WrappingButton from "./WrappingButton";
-import TextGeneration from "./TextGeneration";
+import ButtonHolder from "./Buttons/ButtonHolder";
 
 export default function Game() {
   //create state for boardSize
@@ -18,15 +14,19 @@ export default function Game() {
   //create state for wrapping
   const [wrapping, setWrapping] = useState(false);
 
+
+  //create new board whenever boardSize changes
+  useEffect(() => {
+    setBoard(create2DArray(boardSize, boardSize));
+  }
+  , [boardSize]);
+
+
   return (
     <BoardContext.Provider value={{ board, setBoard, boardSize, setBoardSize, generation, setGeneration, wrapping, setWrapping }}>
     <div>
-      <TextGeneration />
-      <WrappingButton />
-      <CreateBoardButtons />
-      <AutoButtons />
-      <AdvanceButton />
       <Board />
+      <ButtonHolder />
     </div>
     </BoardContext.Provider>
   );
