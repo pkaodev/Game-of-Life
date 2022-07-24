@@ -6,7 +6,7 @@ import ButtonHolder from "./Buttons/ButtonHolder";
 
 export default function Game() {
   //create state for boardSize
-  const [boardSize, setBoardSize] = useState(30);
+  const [boardSize, setBoardSize] = useState(24);
   //create state for baord
   const [board, setBoard] = useState(create2DArray(boardSize, boardSize));
   //create state for generation
@@ -17,16 +17,16 @@ export default function Game() {
   const [isRunning, setIsRunning] = useState(false);
 
 
-  //create new board whenever boardSize changes
+  //create new board when component mounts
   useEffect(() => {
     setBoard(create2DArray(boardSize, boardSize));
   }
-  , [boardSize]);
+  , []);
 
 
   return (
     <BoardContext.Provider value={{ isRunning, setIsRunning, board, setBoard, boardSize, setBoardSize, generation, setGeneration, wrapping, setWrapping }}>
-    <div>
+    <div className='game'>
       <Board />
       <ButtonHolder />
     </div>

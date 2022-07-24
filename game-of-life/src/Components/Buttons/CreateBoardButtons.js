@@ -1,17 +1,22 @@
 import React, { useContext, useState } from "react";
 import BoardContext from "../../contexts/boardContext";
+import { create2DArray } from "../../utils/utils";
 
 export default function CreateBoardButtons() {
-  const { boardSize, setBoardSize, setIsRunning, setBoard } = useContext(BoardContext);
+  const { boardSize, setBoardSize, setIsRunning, setGeneration, setBoard } = useContext(BoardContext);
   //create state for new board size
   const [newBoardSize, setNewBoardSize] = useState(boardSize);
 
   //function to reset board
   //set boardsize to newboardsize
+  //set generation to 0
   //set isrunning to false
+  //clears board
   const handleReset = () => {
     setBoardSize(newBoardSize);
+    setGeneration(0)
     setIsRunning(false);
+    setBoard(create2DArray(newBoardSize, newBoardSize));
   };
 
   return (
