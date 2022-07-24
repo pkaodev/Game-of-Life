@@ -85,10 +85,11 @@
 .wrapping-button {
   width: 100px;
   height: 30px;
-  background-color: teal;
-  color: darkorange;
+  background-color: red;
+  color: white;
   border-radius: 5px;
   cursor: pointer;
+  margin: 1vmin 0;
 }
 
 .text-generation {
@@ -100,7 +101,7 @@
 .create-board-buttons {
   width: 100px;
   height: auto;
-  background-color: red;
+  background-color: black;
   color: white;
   border-radius: 5px;
 
@@ -116,7 +117,7 @@
 .reset-button {
   width: 100px;
   height: 30px;
-  background-color: green;
+  background-color: red;
   color: white;
   border-radius: 5px;
   cursor: pointer;

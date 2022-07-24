@@ -13,6 +13,8 @@ export default function Game() {
   const [generation, setGeneration] = useState(0);
   //create state for wrapping
   const [wrapping, setWrapping] = useState(false);
+  //create state for simulation running auto
+  const [isRunning, setIsRunning] = useState(false);
 
 
   //create new board whenever boardSize changes
@@ -23,7 +25,7 @@ export default function Game() {
 
 
   return (
-    <BoardContext.Provider value={{ board, setBoard, boardSize, setBoardSize, generation, setGeneration, wrapping, setWrapping }}>
+    <BoardContext.Provider value={{ isRunning, setIsRunning, board, setBoard, boardSize, setBoardSize, generation, setGeneration, wrapping, setWrapping }}>
     <div>
       <Board />
       <ButtonHolder />

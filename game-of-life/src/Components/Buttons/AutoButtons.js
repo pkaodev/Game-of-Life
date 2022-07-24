@@ -3,8 +3,7 @@ import { createNextGeneration, createNextGenerationWrapping } from "../../utils/
 import BoardContext from "../../contexts/boardContext";
 
 export default function AutoButtons() {
-  const { board, setBoard, wrapping, generation, setGeneration } = useContext(BoardContext);
-  const [isRunning, setIsRunning] = useState(false);
+  const { board, setBoard, wrapping, generation, setGeneration, isRunning, setIsRunning } = useContext(BoardContext);
   const [speed, setSpeed] = useState(2);
 
   //if !isRunning, set to true and vice versa

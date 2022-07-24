@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import BoardContext from "../../contexts/boardContext";
 
 export default function CreateBoardButtons() {
-  const { boardSize, setBoardSize, setIsRunning } = useContext(BoardContext);
+  const { boardSize, setBoardSize, setIsRunning, setBoard } = useContext(BoardContext);
   //create state for new board size
   const [newBoardSize, setNewBoardSize] = useState(boardSize);
 

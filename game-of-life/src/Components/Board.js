@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { create2DArray } from "../utils/utils";
 import BoardContext from "../contexts/boardContext";
 
@@ -17,6 +17,9 @@ export default function Board() {
     }
     setBoard(newBoard);
   }
+
+
+  
 
   return (
     <div className="board">
