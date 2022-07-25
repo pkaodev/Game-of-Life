@@ -40,7 +40,6 @@
   width: var(--cell-size);
   border: var(--border-size) grey solid;
 }
-
 .cell--alive {
   background-color: black;
 }
@@ -48,6 +47,32 @@
 .cell--dead {
   background-color: peachpuff;
 }
+/*on hover make cell-dead animate between red green and blue background color*/
+.cell--dead:hover {
+  background-color: rgb(255, 0, 0);
+  transition: background-color 0.5s;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*when hovering over cell makes tile pop out*/
+.cell:hover {
+  box-shadow: var(--border-size) var(--border-size) 5px
+    rgba(0, 0, 0, 0.8) inset;
+  }
+
+
+
+
+
 
 .advance-button {
   width: 100px;
