@@ -32,20 +32,19 @@ export default function AutoButtons() {
 
 
   return (
-    <div className="auto-buttons">
-      Speed:
-      {/*text box to set speed*/}
+    <div className="basic-border auto-buttons">
+      <p classname='text--terminal'>Speed:</p>
+
       <input
-        className="speed-input"
+        className="input--speed"
         type="text"
         value={speed}
         onChange={(e) => {
           setSpeed(e.target.value);
         }}
       />
-      {/*Button to start or stop*/}
       <button
-        className="start-stop-button"
+        className={`button start-stop-button-${isRunning}`}
         onClick={handleIsRunning}
       >
         {isRunning ? "Stop" : "Start"}

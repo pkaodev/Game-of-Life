@@ -20,19 +20,17 @@ export default function CreateBoardButtons() {
   };
 
   return (
-    <div className="create-board-buttons">
-      Board Size:
-      {/*text box to set speed*/}
+    <div className='basic-border'>
+      <p className='text--terminal'>Board Size:</p>
       <input
-        className="size-input"
+        className="input--board-size"
         type="text"
         value={newBoardSize}
         onChange={(e) => {
           setNewBoardSize(e.target.value);
         }}
-      />
-      {/*Button to start or stop*/}
-      <button className="reset-button" onClick={handleReset}>
+        />
+      <button className="button reset-button" onClick={handleReset}>
         Reset
       </button>
     </div>

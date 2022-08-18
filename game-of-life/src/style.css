@@ -7,7 +7,7 @@
 .App {
   width: 100vw;
   height: 100vh;
-  background-color: paleturquoise;
+  background-color: darkslategrey;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,10 +29,10 @@
 
 .row {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  /* flex-direction: row; */
+  /* flex-wrap: wrap; */
+  /* justify-content: center; */
+  /* align-items: center; */
 }
 
 .cell {
@@ -43,102 +43,69 @@
 .cell--alive {
   background-color: black;
 }
-
 .cell--dead {
-  background-color: peachpuff;
-}
-/*on hover make cell-dead animate between red green and blue background color*/
-.cell--dead:hover {
-  background-color: rgb(255, 0, 0);
-  transition: background-color 0.5s;
+  background-color: #FFB347;
 }
 
-
-
-
-
-
-
-
-
-
-
-/*when hovering over cell makes tile pop out*/
 .cell:hover {
   box-shadow: var(--border-size) var(--border-size) 5px
     rgba(0, 0, 0, 0.8) inset;
   }
 
-
-
-
+.button {
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: black;
+  color: #f5f5dc;
+  margin: 10px 0px;
+}
 
 
 .advance-button {
   width: 100px;
   height: 30px;
-  background-color: red;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
-  margin: 10px 0px;
 }
 
 .auto-buttons {
   width: 100px;
   height: 60px;
-  background-color: black;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
-  margin: 10px 0px;
 }
 
-.speed-input {
+.input--speed {
   width: 100px;
 }
 
-.start-stop-button {
+.start-stop-button-true {
   width: 100px;
   height: 30px;
   background-color: red;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
 }
-
-.wrapping-button {
+.start-stop-button-false {
   width: 100px;
   height: 30px;
-  background-color: red;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
-  margin: 1vmin 0;
+  background-color: green;
 }
-
-.text-generation {
-  background-color: bisque;
-  color: black;
-  border-radius: 5px;
+.wrapping-button-true {
+  width: 100px;
+  height: 30px;
+  background-color: green;
+}
+.wrapping-button-false {
+  width: 100px;
+  height: 30px;
+  background-color: palevioletred;
 }
 
 .create-board-buttons {
   width: 100px;
   height: auto;
-  background-color: black;
-  color: white;
-  border-radius: 5px;
-
   display: flex;
   flex-direction: column;
 
 }
-
-.size-input {
+.input--board-size {
   width: 100px;
 }
-
 .reset-button {
   width: 100px;
   height: 30px;
@@ -149,9 +116,25 @@
 }
 
 .button-holder {
+  background-color: grey;
+  padding: 1vmin;
   position: fixed;
   right: 5%;
   bottom: 50%;
   display: flex;
   flex-direction: column;
+}
+.text--terminal{
+  font-size: 20px;
+  color: yellow;
+}
+.text-important{
+  font-weight: bold;
+}
+
+.basic-border{
+  border: 3px solid darkslategrey;
+  padding: 3px;
+  margin: 5px;
+
 }

@@ -26,10 +26,10 @@ export default function Game() {
 
   return (
     <BoardContext.Provider value={{ isRunning, setIsRunning, board, setBoard, boardSize, setBoardSize, generation, setGeneration, wrapping, setWrapping }}>
-    <div className='game'>
+    <>
       <Board />
       <ButtonHolder />
-    </div>
+    </>
     </BoardContext.Provider>
   );
 }

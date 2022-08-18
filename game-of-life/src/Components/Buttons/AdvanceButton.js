@@ -6,7 +6,7 @@ export default function AdvanceButton() {
   const { board, setBoard , wrapping, generation, setGeneration} = useContext(BoardContext);
   return (
     <div
-      className="advance-button"
+      className="basic-border button advance-button"
       onClick={() => {
         if (!wrapping) {
         createNextGeneration(board, setBoard, generation, setGeneration);
