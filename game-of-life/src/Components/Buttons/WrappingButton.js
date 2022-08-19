@@ -11,12 +11,12 @@ export default function WrappingButton() {
      
     console.log('HI-->',`wrapping-button-${wrapping}` )
 
-  return <>
-  <p className='button-text'>Wrap at edges</p>
+  return <div className='button-holder'>
+  <p className='text--terminal'>Wrap at edges</p>
   <button
   className={`button wrapping-button-${wrapping}`}
   onClick={()=>{setWrapping(!wrapping)}}>
     {`${!wrapping ? 'Disabled' : 'Enabled'}`}
     </button>
-  </>
+  </div>
 }

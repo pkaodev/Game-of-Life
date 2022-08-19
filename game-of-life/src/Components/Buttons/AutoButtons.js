@@ -32,8 +32,8 @@ export default function AutoButtons() {
 
 
   return (
-    <div className="basic-border auto-buttons">
-      <p classname='text--terminal'>Speed:</p>
+    <div className="button-holder">
+      <p className='text--terminal'>Speed(1-100):</p>
 
       <input
         className="input--speed"

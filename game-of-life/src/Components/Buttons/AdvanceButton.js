@@ -5,8 +5,10 @@ import { createNextGeneration, createNextGenerationWrapping} from "../../utils/u
 export default function AdvanceButton() {
   const { board, setBoard , wrapping, generation, setGeneration} = useContext(BoardContext);
   return (
-    <div
-      className="basic-border button advance-button"
+    <div className='button-holder'>
+      <p className='text--terminal'>Advance 1 generation</p>
+    <button
+      className="basic-border button"
       onClick={() => {
         if (!wrapping) {
         createNextGeneration(board, setBoard, generation, setGeneration);
@@ -17,7 +19,8 @@ export default function AdvanceButton() {
 
       }}
     >
-        Advance 1
+        Step
+    </button>
     </div>
   );
 }

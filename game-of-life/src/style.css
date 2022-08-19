@@ -58,21 +58,13 @@
   background-color: black;
   color: #f5f5dc;
   margin: 10px 0px;
-}
-
-
-.advance-button {
   width: 100px;
   height: 30px;
 }
 
-.auto-buttons {
-  width: 100px;
-  height: 60px;
-}
-
 .input--speed {
-  width: 100px;
+  width: 50px;
+  text-align: center;
 }
 
 .start-stop-button-true {
@@ -104,25 +96,34 @@
 
 }
 .input--board-size {
-  width: 100px;
+  width: 50px;
+  text-align: center;
 }
 .reset-button {
   width: 100px;
   height: 30px;
   background-color: red;
-  color: white;
   border-radius: 5px;
   cursor: pointer;
 }
-
-.button-holder {
+.holder-holder {
   background-color: grey;
   padding: 1vmin;
   position: fixed;
-  right: 5%;
-  bottom: 50%;
+  right: 0%;
+  top: 0%;
   display: flex;
   flex-direction: column;
+  border-radius: 0.5vmin;
+}
+.button-holder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid darkslategrey;
+  padding: 3px;
+  margin: 5px;
 }
 .text--terminal{
   font-size: 20px;
@@ -132,9 +133,7 @@
   font-weight: bold;
 }
 
-.basic-border{
-  border: 3px solid darkslategrey;
-  padding: 3px;
-  margin: 5px;
-
+.info-box {
+  width: fit-content;
+  cursor: pointer;
 }

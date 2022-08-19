@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Board from "./Board";
 import { create2DArray } from "../utils/utils";
 import BoardContext from "../contexts/boardContext";
-import ButtonHolder from "./Buttons/ButtonHolder";
+import HolderHolder from "./HolderHolder";
 
 export default function Game() {
   //create state for boardSize
@@ -28,7 +28,7 @@ export default function Game() {
     <BoardContext.Provider value={{ isRunning, setIsRunning, board, setBoard, boardSize, setBoardSize, generation, setGeneration, wrapping, setWrapping }}>
     <>
       <Board />
-      <ButtonHolder />
+      <HolderHolder />
     </>
     </BoardContext.Provider>
   );

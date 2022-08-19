@@ -20,7 +20,7 @@ export default function CreateBoardButtons() {
   };
 
   return (
-    <div className='basic-border'>
+    <div className='button-holder'>
       <p className='text--terminal'>Board Size:</p>
       <input
         className="input--board-size"

@@ -1,28 +1,30 @@
-import React, { useState, useContext, useEffect } from "react";
-import { create2DArray } from "../utils/utils";
+import React, { useContext } from "react";
+
 import BoardContext from "../contexts/boardContext";
 
 export default function Board() {
-  const {board, setBoard} = useContext(BoardContext);
+  const { board, setBoard, wrapping } = useContext(BoardContext);
 
   //changes clicked cell to alive or dead
   const handleBoardClick = (rowIndex, cellIndex) => {
-    const newBoard = board.map( row => {
+    const newBoard = board.map((row) => {
       return row.slice();
-    })
+    });
     if (newBoard[rowIndex][cellIndex] === 0) {
-    newBoard[rowIndex][cellIndex] = 1;
+      newBoard[rowIndex][cellIndex] = 1;
     } else {
-    newBoard[rowIndex][cellIndex] = 0;
+      newBoard[rowIndex][cellIndex] = 0;
     }
     setBoard(newBoard);
-  }
-
-
-  
+  };
 
   return (
-    <div className="board">
+    <div
+      className="board"
+      style={
+        wrapping ? null : { border: "solid red 10px", borderRadius: "10px" }
+      }
+    >
       {board.map((row, rowIndex) => {
         return (
           <div className="row" key={rowIndex}>
@@ -31,7 +33,9 @@ export default function Board() {
                 <div
                   className={`cell 
                   ${cell ? "cell--alive" : "cell--dead"}`}
-                  onClick = {() => {handleBoardClick(rowIndex, cellIndex)}}
+                  onClick={() => {
+                    handleBoardClick(rowIndex, cellIndex);
+                  }}
                   key={cellIndex}
                 ></div>
               );
