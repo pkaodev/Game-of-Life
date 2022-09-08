@@ -110,10 +110,9 @@
   background-color: grey;
   padding: 1vmin;
   position: fixed;
-  right: 0%;
-  top: 0%;
+  bottom: 0;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   border-radius: 0.5vmin;
 }
 .button-holder {
