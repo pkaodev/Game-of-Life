@@ -19,6 +19,7 @@ export default function CreateBoardButtons() {
     setBoard(create2DArray(newBoardSize, newBoardSize));
   };
 
+  
   return (
     <div className='button-holder'>
       <p className='text--terminal'>Board Size:</p>
